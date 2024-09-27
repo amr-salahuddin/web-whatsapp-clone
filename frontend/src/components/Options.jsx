@@ -2,6 +2,7 @@ import { Box, useTheme } from "@mui/material";
 import ChatsOption from "./ContentOptions/ChatsOption";
 import { useSelector } from "react-redux";
 import Status from "./ContentOptions/Status";
+import Profile from "./ContentOptions/Profile";
 
 function Options() { 
     
@@ -11,9 +12,10 @@ function Options() {
     //disable selection
 
     return (
-        <Box   sx={{userSelect:'none'}}   height={'100%'}>
+        <Box   sx={{userSelect:'none'}} height='100%'  minHeight={'600px'}>
             {option === 0 && <ChatsOption/>}
             {option === 1 && <Status/>}
+            {option === 5 && <Profile/>}
         </Box>
     )
 }

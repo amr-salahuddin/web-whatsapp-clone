@@ -117,6 +117,10 @@ export const themeSettings = (mode) => {
         color: paletteMode(mode).primary.light,
         fontWeight:100
 
+      },
+      body1:{
+        fontFamily:["SF Pro Text", "SF Pro Icons", 'system', '-apple-system', 'system-ui', 'BlinkMacSystemFont', "Segoe UI", "Helvetica Neue", 'Helvetica', 'Arial', "Lucida Grande", 'Ubuntu', 'Cantarell', "Fira Sans", 'sans-serif'].join(","),
+        fontWeight:200
       }
 
     },
@@ -127,7 +131,7 @@ export const themeSettings = (mode) => {
       MuiIconButton: {
         styleOverrides: {
           root: {
-            color: colorTokens.grey[1000],
+            color: colorTokens.grey[500],
           },
 
         },

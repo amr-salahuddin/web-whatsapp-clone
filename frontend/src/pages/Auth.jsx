@@ -4,6 +4,8 @@ import { Form, Formik, useFormik } from 'formik';
 import * as Yup from 'yup';
 import Register from './Auth/Register';
 import Login from './Auth/Login';
+import { useDispatch } from 'react-redux';
+import { setLogin } from '../state/first';
 
 const validationSchema = Yup.object({
   name: Yup.string().when('isLogin', {
@@ -23,6 +25,7 @@ const Auth = () => {
   const [isLogin, setIsLogin] = useState(false);
 
   const theme = useTheme();
+  const dispatch = useDispatch();
   const green = theme.palette.primary.green;
   const bggreen = theme.palette.background.green;
   // Toggle between login and registration
@@ -30,6 +33,11 @@ const Auth = () => {
     setIsLogin(event.target.checked);
   };
 
+  function setAuth(data) {
+    const {user, token} = data
+    console.log(data)
+    dispatch(setLogin({user,token}))
+  }
 
 
   return (
@@ -40,19 +48,19 @@ const Auth = () => {
         justifyContent: 'center',
         alignItems: 'center',
         bgcolor: '#f3f3f3',
-        
+
       }}
       display="flex"
       flexDirection="column"
       alignItems="center"
 
     >
-      {isLogin ? <Login /> : <Register />}
-       <FormControlLabel
-                    control={<Switch checked={isLogin} onChange={handleSwitchChange} />}
-                    label={isLogin ? 'Switch to Register' : 'Switch to Login'}
-                    sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}
-                />
+      {isLogin ? <Login setAuth={setAuth} /> : <Register setAuth={setAuth} />}
+      <FormControlLabel
+        control={<Switch checked={isLogin} onChange={handleSwitchChange} />}
+        label={isLogin ? 'Switch to Register' : 'Switch to Login'}
+        sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}
+      />
     </Box>
   );
 };

@@ -16,7 +16,7 @@ const validationSchema = Yup.object({
         .min(4, 'Password must be at least 4 characters')
         .required('Password is required'),
 });
-function Register() {
+function Register({ setAuth }) {
 
     const theme = useTheme();
 
@@ -29,10 +29,14 @@ function Register() {
     }
 
 
+
     async function handleSubmit(values, { setSubmitting }) {
         console.log(values)
         const data = await registerAPI(values);
-        console.log(data)
+        if (data.success) {
+            setAuth(data.data);
+        }
+
         setSubmitting(false)
     }
 
