@@ -1,7 +1,9 @@
 import { Box, Typography, TextField, Button, FormControlLabel, Switch, useTheme } from "@mui/material"
 import { green } from "@mui/material/colors"
 import { useFormik } from "formik";
+import { useEffect } from "react";
 import * as Yup from 'yup';
+import { registerAPI } from "../../utils/apiRequests";
 
 
 const validationSchema = Yup.object({
@@ -11,7 +13,7 @@ const validationSchema = Yup.object({
         .email('Invalid email address')
         .required('Email is required'),
     password: Yup.string()
-        .min(6, 'Password must be at least 6 characters')
+        .min(4, 'Password must be at least 4 characters')
         .required('Password is required'),
 });
 function Register() {
@@ -26,20 +28,24 @@ function Register() {
 
     }
 
+
+    async function handleSubmit(values, { setSubmitting }) {
+        console.log(values)
+        const data = await registerAPI(values);
+        console.log(data)
+        setSubmitting(false)
+    }
+
+
     const formik = useFormik({
         initialValues,
         validationSchema,
         validateOnChange: false,
         validateOnBlur: false,
 
-        onSubmit: (values) => {
-            console.log(values)
-        }
+        onSubmit: handleSubmit
 
     })
-    function handleSubmit(values) {
-        console.log(values)
-    }
 
     return (
         <Box
@@ -55,7 +61,7 @@ function Register() {
                 Register
             </Typography>
 
-            <form onSubmit={formik.handleSubmit}>
+            <form onSubmit={formik.handleSubmit} noValidate>
                 <TextField
                     label="Name"
                     name="name"

@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setMode } from './state/first';
 import Auth from './pages/Auth';
 
+
 function App() {
 
 
@@ -17,6 +18,7 @@ function App() {
   dispatch(setMode({ mode: 'light' }));
 
   console.log(mode)
+  console.log('env',import.meta.env.VITE_BACKEND_URL)
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   return (
     <div className='app'>

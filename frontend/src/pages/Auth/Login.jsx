@@ -2,6 +2,8 @@ import { Box, Typography, TextField, Button, FormControlLabel, Switch, useTheme 
 import { green } from "@mui/material/colors"
 import { useFormik } from "formik";
 import * as Yup from 'yup';
+import { loginAPI } from "../../utils/apiRequests";
+import { useDispatch } from "react-redux";
 
 
 const validationSchema = Yup.object({
@@ -9,34 +11,37 @@ const validationSchema = Yup.object({
         .email('Invalid email address')
         .required('Email is required'),
     password: Yup.string()
-        .min(6, 'Password must be at least 6 characters')
+        .min(4, 'Password must be at least 4 characters')
         .required('Password is required'),
 });
 function Login() {
 
     const theme = useTheme();
-
+    const dispatch = useDispatch();
     const green = theme.palette.primary.green;
     const initialValues = {
         email: '',
         password: '',
 
     }
+    async function handleSubmit(values, { setSubmitting }) {
+        console.log(values)
+        const data = await loginAPI(values);
+        console.log(data)
 
+        
+        setSubmitting(false)
+    }
     const formik = useFormik({
         initialValues,
         validationSchema,
         validateOnChange: false,
         validateOnBlur: false,
 
-        onSubmit: (values) => {
-            console.log(values)
-        }
+        onSubmit: handleSubmit
 
     })
-    function handleSubmit(values) {
-        console.log(values)
-    }
+   
 
     return (
         <Box
