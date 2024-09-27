@@ -141,6 +141,16 @@ export const themeSettings = (mode) => {
         }
 
       },
+      Box:{
+        styleOverrides: {
+          root: {
+          }
+        },
+        defaultProps: {
+          suppressContentEditableWarning:true
+
+        }
+      },
       MuiInputBase: {
         styleOverrides: {
           input: {
@@ -160,6 +170,7 @@ export const themeSettings = (mode) => {
             textTransform: 'none',
             fontWeight: 400,
             minWidth: 'auto'
+
 
           },
         },

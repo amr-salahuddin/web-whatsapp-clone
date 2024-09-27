@@ -72,270 +72,7 @@ const initialState = {
             ]
 
         },
-        {
-            id: 0,
-
-            //info of user
-            details: {
-                name: 'John Doe',
-                avatar: 'https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&dpr=1&w=1000',
-                lastMessage: 'Hey, How are you?',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-
-
-
-
-        },
-        {
-            id: 1,
-
-            //info of user
-            details: {
-                name: 'Xon Veber',
-                avatar: 'https://distribution.faceit-cdn.net/images/9ca4e577-24b8-43b8-9b73-fc7c13f2ce6b.jpeg',
-                lastMessage: 'lol whassup',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-        },
-
-        {
-            id: 0,
-
-            //info of user
-            details: {
-                name: 'John Doe',
-                avatar: 'https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&dpr=1&w=1000',
-                lastMessage: 'Hey, How are you?',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-
-
-
-
-        },
-        {
-            id: 1,
-
-            //info of user
-            details: {
-                name: 'Xon Veber',
-                avatar: 'https://distribution.faceit-cdn.net/images/9ca4e577-24b8-43b8-9b73-fc7c13f2ce6b.jpeg',
-                lastMessage: 'lol whassup',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-        },
-
-        {
-            id: 0,
-
-            //info of user
-            details: {
-                name: 'John Doe',
-                avatar: 'https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&dpr=1&w=1000',
-                lastMessage: 'Hey, How are you?',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-
-
-
-
-        },
-        {
-            id: 1,
-
-            //info of user
-            details: {
-                name: 'Xon Veber',
-                avatar: 'https://distribution.faceit-cdn.net/images/9ca4e577-24b8-43b8-9b73-fc7c13f2ce6b.jpeg',
-                lastMessage: 'lol whassup',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-        },
-
-        {
-            id: 0,
-
-            //info of user
-            details: {
-                name: 'John Doe',
-                avatar: 'https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&dpr=1&w=1000',
-                lastMessage: 'Hey, How are you?',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-
-
-
-
-        },
-        {
-            id: 1,
-
-            //info of user
-            details: {
-                name: 'Xon Veber',
-                avatar: 'https://distribution.faceit-cdn.net/images/9ca4e577-24b8-43b8-9b73-fc7c13f2ce6b.jpeg',
-                lastMessage: 'lol whassup',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-        },
-
-        {
-            id: 0,
-
-            //info of user
-            details: {
-                name: 'John Doe',
-                avatar: 'https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&dpr=1&w=1000',
-                lastMessage: 'Hey, How are you?',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-
-
-
-
-        },
-        {
-            id: 1,
-
-            //info of user
-            details: {
-                name: 'Xon Veber',
-                avatar: 'https://distribution.faceit-cdn.net/images/9ca4e577-24b8-43b8-9b73-fc7c13f2ce6b.jpeg',
-                lastMessage: 'lol whassup',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-        },
-
-        {
-            id: 0,
-
-            //info of user
-            details: {
-                name: 'John Doe',
-                avatar: 'https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&dpr=1&w=1000',
-                lastMessage: 'Hey, How are you?',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-            ]
-
-
-
-
-
-        },
-        {
-            id: 1,
-
-            //info of user
-            details: {
-                name: 'Xon Veber',
-                avatar: 'https://distribution.faceit-cdn.net/images/9ca4e577-24b8-43b8-9b73-fc7c13f2ce6b.jpeg',
-                lastMessage: 'lol whassup',
-                time: 'Yesterday',
-            },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-              {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
-              {sender:'them', text: 'not bad',time:'10:01'},
-              {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'not bad',time:'10:01'},
-              {sender:'them', text: 'not bad',time:'10:01'},
-              {sender:'them', text: 'not bad',time:'10:01'},
-              {sender:'them', text: 'not bad',time:'10:01'},
-              {sender:'them', text: 'not bad',time:'10:01'},
-              {sender:'them', text: 'not bad',time:'10:01'},
-              {sender:'them', text: 'not bad',time:'10:01'},
-              {sender:'them', text: 'not bad',time:'10:01'},
-
-            ]
-
-        },
-
-
-
-
+        
     ]
 }
 
@@ -351,6 +88,15 @@ export const firstSlice = createSlice({
             state.user = action.payload.user
             state.token = action.payload.token
         },
+        updateUser: (state, action) => {
+
+            state.user = {
+                ...state.user,
+                ...action.payload.data
+            }
+
+          
+        },
         setLogout: (state) => {
             state.user = null
             state.token = null
@@ -365,6 +111,6 @@ export const firstSlice = createSlice({
     }
 })
 
-export const { setMode, setLogin, setLogout, setSelectedSideButton, setSelectedChat } = firstSlice.actions
+export const { setMode, setLogin,updateUser, setLogout, setSelectedSideButton, setSelectedChat } = firstSlice.actions
 
 export default firstSlice.reducer

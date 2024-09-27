@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import StatusContact from "./Status/StatusContact";
 import zIndex from "@mui/material/styles/zIndex";
 import ProfileInput from "./Profile/ProfileInput";
+import { setLogout, updateUser } from "../../state/first";
 
 function Profile() {
 
@@ -33,8 +34,19 @@ function Profile() {
     function onAboutChange(e) {
         setAbout(e.target.value);
     }
+
+
+    function onSubmitHandler(e) {
+        dispatch(updateUser({data:{ name, about }}));
+
+    }
+    function logoutHandler() {
+        dispatch(setLogout());
+        
+    }
+
     return (
-        <Box bgcolor={alt   } pt={2} display='flex' flexDirection='column' height='100%' overflowY='auto' >
+        <Box bgcolor={alt} pt={2} display='flex' flexDirection='column' height='100%' overflowY='auto' >
             <Box mx={3} mb={2} height='5%' display='flex' flexDirection='column' justifyContent='space-between' gap={3}>
                 <Box display='flex' justifyContent={'space-between'} alignItems={'center'} >
                     <Typography fontWeight={500} variant='h3'>Profile</Typography>
@@ -64,10 +76,10 @@ function Profile() {
                         }}
                     >
                         <Box>
-                        <WCamera/>
-                        <Typography  variant="body1" >
-                            ADD PROFILE <br/>PHOTO
-                        </Typography>
+                            <WCamera />
+                            <Typography variant="body1" >
+                                ADD PROFILE <br />PHOTO
+                            </Typography>
                         </Box>
                     </Box>
                     <Avatar sx={{ zIndex: 1, width: '12rem', height: '12rem' }} />
@@ -75,16 +87,16 @@ function Profile() {
             </Box>
             <Box height='15%'>
 
-            <ProfileInput text='Your name' placeholder='John Doe' value={name} onChange={onNameChange} onSubmit={console.log('s')}/>
-</Box>
-            <Box px={3} pt={2}  height={'14%'} sx={{ overflowY: 'auto', }}>
+                <ProfileInput text='Your name' placeholder='John Doe' value={name} onChange={onNameChange} onSubmit={onSubmitHandler} />
+            </Box>
+            <Box px={3} pt={2} height={'14%'} sx={{ overflowY: 'auto', }}>
                 <Typography variant='body2' color={light} fontSize={14} fontWeight={100} >This is not your username or PIN. This name will be visible to your WhatsApp contacts.</Typography>
 
-        
+
             </Box>
             <Box height='15%'>
-           <ProfileInput text='About' placeholder='...' value={about} onChange={onAboutChange} onSubmit={console.log('s')}/>
-           </Box>
+                <ProfileInput text='About' placeholder='...' value={about} onChange={onAboutChange} onSubmit={onSubmitHandler} />
+            </Box>
         </Box>
     )
 }
