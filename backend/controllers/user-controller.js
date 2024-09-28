@@ -1,6 +1,13 @@
 const userService = require('../services/user-service');
 const catchAsync = require('../utils/catchAsync');
 
+
+
+exports.deleteAllUsers = catchAsync(async (req, res) => {
+
+    await userService.deleteAllUsers();
+    res.status(204).end();
+})
 exports.getAllUsers = catchAsync(async (req, res) => {
     const users = await userService.getAllUsers();
 

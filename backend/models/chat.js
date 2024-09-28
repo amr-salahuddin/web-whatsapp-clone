@@ -1,29 +1,6 @@
 
 const mongoose = require('mongoose');
 
-const messageSchema = new mongoose.Schema({
-    sender: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    },
-    text: {
-        type: String
-    },
-    media:{
-        type: [String]
-    },
-    time: {
-        type: String
-    },
-    seen:{
-        type: Boolean,
-        default: false
-    },
-    delivered:{
-        type: Boolean,
-        default: false
-    },
-})
 
 const chatSchema = new mongoose.Schema({
     user1:{
@@ -37,6 +14,9 @@ const chatSchema = new mongoose.Schema({
     messages:[{
         type: [mongoose.Schema.Types.ObjectId],
         ref: 'Message'
-    }]
+    }],
+  
+}, {
+    timestamps: true
 })
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('Chat', chatSchema)

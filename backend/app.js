@@ -10,7 +10,9 @@ const app = express();
 //region ROUTES
 const userRoute = require('./routes/user-route');
 const authRoute = require('./routes/auth-route');
+const chatRoute = require('./routes/chat-route');
 //endregion
+const globalErrorHandler = require('./controllers/error-controller');
 
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
@@ -24,15 +26,8 @@ app.get('/', (req, res) => {
 app.use('/public', express.static('public'));
 app.use('/api/v1/user',userRoute );
 app.use('/api/v1/auth',authRoute );
-app.use((err, req, res, next) => {
-  const status = err.statusCode || 500;
-  const message = err.message;
-  const data = err.data;
-  res.status(status).json({
-    status: 'error',
-    message,
-    data
-  })
-})
+app.use('/api/v1/chat',chatRoute );
+app.use(globalErrorHandler);
+
 
 module.exports = app

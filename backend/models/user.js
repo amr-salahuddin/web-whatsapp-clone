@@ -18,6 +18,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    passwordChangedAt: {
+        type: Date
+    },
     avatar: {
         type: String
     },
@@ -54,13 +57,18 @@ const userSchema = new mongoose.Schema({
 
     },
     contacts: {
-
         type: [mongoose.Schema.Types.ObjectId],
         ref: "User"
     },
     knownUsers: {
         type: [mongoose.Schema.Types.ObjectId],
         ref: "User"
+    },
+    existingChats: {
+        type: Map,
+        of: mongoose.Schema.Types.ObjectId  ,
+        default: {}  // Initialize as an empty object
+
     },
     statuses: {
 
@@ -82,12 +90,30 @@ userSchema.methods.correctPassword = async function (
     return await bcrypt.compare(candidatePassword, userPassword);
 };
 
+userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
+    if (this.passwordChangedAt) {
+        const changedTimestamp = parseInt(
+            this.passwordChangedAt.getTime() / 1000,
+            10
+        );
+        return JWTTimestamp < changedTimestamp;
+    }
+    return false;
+};
+
+userSchema.pre('save', async function (next) {
+    if (!this.isModified('password') || this.isNew) {
+        return next();
+    }
+    
+    this.passwordChangedAt = Date.now() - 1000;
+    next();
+});
 userSchema.pre('save', async function (next) {
     if (!this.isModified('password')) {
         next();
     }
     this.password = await bcrypt.hash(this.password, 12);
-
     next();
 })
 

@@ -2,6 +2,13 @@ const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const { tokenize } = require('../utils/tokenization');
 const AppError = require('../utils/appError');
+
+
+exports.deleteAllUsers = async () => {
+
+    await User.deleteMany({});
+    return 1;
+}
 exports.getAllUsers = async () => {
     const users = await User.find({});
     return users;

@@ -1,5 +1,8 @@
 {
-    "compilerOptions": {
-         "checkJs": true,
-    },
-  }
+     "compilerOptions": {
+          "allowJs": true, // Allow JavaScript files in the project
+          "checkJs": true, // Disable TypeScript type checking in JavaScript files
+          "noEmit": true // Prevent any file output
+      // Prevent any TypeScript output or errors
+     },
+}

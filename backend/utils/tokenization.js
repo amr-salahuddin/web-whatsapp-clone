@@ -7,3 +7,8 @@ exports.tokenize = (payload) => {
     })
     return token
 }
+
+exports.decodeToken = (token) => {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    return decoded
+}
