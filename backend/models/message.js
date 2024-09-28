@@ -20,7 +20,8 @@ const messageSchema = new mongoose.Schema({
         type: [String]
     },
     time: {
-        type: String
+        type: Date,
+        default: Date.now
     },
     seen:{
         type: Boolean,

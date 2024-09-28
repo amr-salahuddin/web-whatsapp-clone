@@ -14,10 +14,20 @@ exports.addChat = catchAsync(async (req, res, next) => {
     })
 })
 
-exports.deleteAllChats = catchAsync(async (req, res, next) => {
-    await chatService.deleteAllChats();
-    res.status(204).end();
+exports.getAllChats = catchAsync(async (req, res, next) => {
+
+    const user = req.user;
+    const {page,limit}=req.query
+
+    const chats = await chatService.getAllChats(user,page,limit);
+    res.status(200).json({
+        status: 'success',
+        data: {
+            chats
+        }
+    })
 })
+
 
 exports.getChat = catchAsync(async (req, res, next) => {
     const chat = await chatService.getChat(req.params.id);
@@ -29,3 +39,11 @@ exports.getChat = catchAsync(async (req, res, next) => {
     })
 })
 
+
+
+
+//no
+exports.deleteAllChats = catchAsync(async (req, res, next) => {
+    await chatService.deleteAllChats();
+    res.status(204).end();
+})

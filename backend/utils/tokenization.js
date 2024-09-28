@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const AppError = require('./appError');
 
 exports.tokenize = (payload) => {
     
@@ -9,6 +10,10 @@ exports.tokenize = (payload) => {
 }
 
 exports.decodeToken = (token) => {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    
+    let decoded
+     decoded = jwt.verify(token, process.env.JWT_SECRET);
+     //check if token is malformed
+   
     return decoded
 }

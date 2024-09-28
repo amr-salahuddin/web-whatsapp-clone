@@ -4,8 +4,11 @@ const env = import.meta.env
 const api_url = `${env.VITE_BACKEND_URL}/${env.VITE_API_VERSION}`
 
 
-const apiRequest = async (url, method, body,token) => {
+const apiRequest = async (url, method, body,params,token) => {
 
+
+
+    let data;
 
     try {
         const response = await fetch(`http://${api_url}/${url}`, {
@@ -14,11 +17,14 @@ const apiRequest = async (url, method, body,token) => {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             },
-            body: JSON.stringify(body)
+            body: (method=='GET'?null:JSON.stringify(body)),
+            
         });
 
-        const data = await response.json();
+        data = await response.json();
 
+
+        console.log(data)
         if (!response.ok) {
 
             return {
@@ -33,8 +39,8 @@ const apiRequest = async (url, method, body,token) => {
 
     }
     catch (err) {
-        console.log(err)
-        return { success: false }
+        console.log(data)
+        return { success: false,data }
     }
 
 }
@@ -57,5 +63,18 @@ export const loginAPI = async (data) => {
 export const updateUserAPI = async (data,token) => {
     const {name,about} = data;
     const response = await apiRequest('user/', 'PATCH', {name,about},token);
+    return response
+}
+
+export const getAllChatsAPI = async (token) => {
+
+    const response = await apiRequest('chat/', 'GET',null, null,token);
+
+    return response
+}
+
+export const addMessageAPI = async (data,token) => {
+    const {text,chatId} = data;
+    const response = await apiRequest('chat/message', 'POST', {text,chatId},null,token);
     return response
 }

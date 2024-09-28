@@ -8,17 +8,17 @@ import ChatMessages from "./ChatsContent/ChatMessages";
 function ChatWhats() {
     const chat = useSelector((state) => state.selectedChat);
 
-    console.log(chat,'caaat')
+    console.log(chat,'xxxxxxxxxcaaat')
 
     return (
-        <Box display='flex' height='100%' justifyContent='space-between'  flexDirection='column'>
-            <Box flex={1}  >
-                <ChatTop chatDetails={chat.details} />
+        <Box overflow='hidden' display='flex' height='100%' minHeight='100%' maxHeight='18rem' justifyContent='space-between'   flexDirection='column'>
+            <Box height='10%'  >
+                <ChatTop chatDetails={chat.chatDetails} />
             </Box>
-            <Box flex={7} bgcolor='white' >
-                <ChatMessages chat={chat.chat} />
+            <Box height='80%'  bgcolor='white' >
+                <ChatMessages messages={chat.messages} />
             </Box>
-            <Box flex={1}>
+            <Box height='10%'>
             <ChatBottom/>
             </Box>
             

@@ -3,6 +3,13 @@ const catchAsync = require('../utils/catchAsync');
 
 
 
+exports.deleteAllChats = catchAsync(async (req, res) => {
+
+    const user = req.user;
+    await userService.deleteAllChats(user);
+    res.status(204).end();
+})
+
 exports.deleteAllUsers = catchAsync(async (req, res) => {
 
     await userService.deleteAllUsers();

@@ -10,68 +10,718 @@ const initialState = {
     },
     token: null,
     selectedSideButton: null,
-    selectedChat: {
-        id: 0,
-
-        //info of user
-        details: {
-            name: 'John Doe',
-            avatar: 'https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&dpr=1&w=1000',
-            lastMessage: 'Hey, How are you?',
-            time: 'Yesterday',
-        },   chat: [
-            {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-             {sender:'them', text: 'not bad',time:'10:01'},
-           {sender:'me', text: "let's kill niggers",time:'10:01'},
-          {sender:'them', text: 'ok fine',time:'10:02'},
-        ]
-
-      
-
-
-    },
+    selectedChat: null,
     chatList: [
 
         {
-            id: 0,
-
-            //info of user
-            details: {
-                name: 'John Doe',
-                avatar: 'https://i.seadn.io/gae/b91FFh2EPsExNTHHqECbEQsqDSgaBeOxYWIZfNeYdXfmBOIFPpbyB2VphB_6m_g5iu_ACtgA11X-64TsqWUtdv5x9fFzco4N7OzFYio?auto=format&dpr=1&w=1000',
-                lastMessage: 'Hey, How are you?',
-                time: 'Yesterday',
+            "_id": "66f7f2980d10160b609fd41a",
+            "chatDetails": {
+                "_id": "66f7f2980d10160b609fd41a",
+                "user1": null,
+                "user2": null,
+                "messages": [
+                    [
+                        "66f7f2bf0d10160b609fd422"
+                    ],
+                    [
+                        "66f80512cd11a2ef232d1670"
+                    ],
+                    [
+                        "66f8058b09a827d667ebe4d5"
+                    ]
+                ],
+                "createdAt": "2024-09-28T12:12:08.591Z",
+                "updatedAt": "2024-09-28T13:32:59.164Z",
+                "__v": 3,
+                "otherUser": {
+                    "_id": "66f7f2660d10160b609fd415",
+                    "name": "Jane Doe",
+                    "avatar": "https://st2.depositphotos.com/9998432/48297/v/450/depositphotos_482974572-stock-illustration-default-avatar-photo-placeholder-grey.jpg"
+                }
             },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
+            "messages": [
+                {
+                    "_id": "66f8058b09a827d667ebe4d5",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "????",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:32:59.074Z",
+                    "createdAt": "2024-09-28T13:32:59.277Z",
+                    "updatedAt": "2024-09-28T13:32:59.277Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f80512cd11a2ef232d1670",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "ehh hi",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:30:58.814Z",
+                    "createdAt": "2024-09-28T13:30:59.084Z",
+                    "updatedAt": "2024-09-28T13:30:59.084Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f7f2bf0d10160b609fd422",
+                    "sender": "66f7f22e0d10160b609fd413",
+                    "receiver": "66f7f2660d10160b609fd415",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "hi?",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T12:12:47.640Z",
+                    "createdAt": "2024-09-28T12:12:48.005Z",
+                    "updatedAt": "2024-09-28T12:12:48.005Z",
+                    "__v": 0
+                }
             ]
-
-
-
-
-
         },
         {
-            id: 1,
-
-            //info of user
-            details: {
-                name: 'Xon Veber',
-                avatar: 'https://distribution.faceit-cdn.net/images/9ca4e577-24b8-43b8-9b73-fc7c13f2ce6b.jpeg',
-                lastMessage: 'lol whassup',
-                time: 'Yesterday',
+            "_id": "66f7f2980d10160b609fd41a",
+            "chatDetails": {
+                "_id": "66f7f2980d10160b609fd41a",
+                "user1": null,
+                "user2": null,
+                "messages": [
+                    [
+                        "66f7f2bf0d10160b609fd422"
+                    ],
+                    [
+                        "66f80512cd11a2ef232d1670"
+                    ],
+                    [
+                        "66f8058b09a827d667ebe4d5"
+                    ]
+                ],
+                "createdAt": "2024-09-28T12:12:08.591Z",
+                "updatedAt": "2024-09-28T13:32:59.164Z",
+                "__v": 3,
+                "otherUser": {
+                    "_id": "66f7f2660d10160b609fd415",
+                    "name": "Jane Doe",
+                    "avatar": "https://st2.depositphotos.com/9998432/48297/v/450/depositphotos_482974572-stock-illustration-default-avatar-photo-placeholder-grey.jpg"
+                }
             },
-            chat: [
-                {sender:'me', text: 'Hey, How are you?',time:'10:00'},
-                 {sender:'them', text: 'not bad',time:'10:01'},
-               {sender:'me', text: "let's kill niggers",time:'10:01'},
-              {sender:'them', text: 'ok fine',time:'10:02'},
+            "messages": [
+                {
+                    "_id": "66f8058b09a827d667ebe4d5",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "????",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:32:59.074Z",
+                    "createdAt": "2024-09-28T13:32:59.277Z",
+                    "updatedAt": "2024-09-28T13:32:59.277Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f80512cd11a2ef232d1670",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "ehh hi",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:30:58.814Z",
+                    "createdAt": "2024-09-28T13:30:59.084Z",
+                    "updatedAt": "2024-09-28T13:30:59.084Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f7f2bf0d10160b609fd422",
+                    "sender": "66f7f22e0d10160b609fd413",
+                    "receiver": "66f7f2660d10160b609fd415",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "hi?",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T12:12:47.640Z",
+                    "createdAt": "2024-09-28T12:12:48.005Z",
+                    "updatedAt": "2024-09-28T12:12:48.005Z",
+                    "__v": 0
+                }
             ]
-
+        },{
+            "_id": "66f7f2980d10160b609fd41a",
+            "chatDetails": {
+                "_id": "66f7f2980d10160b609fd41a",
+                "user1": null,
+                "user2": null,
+                "messages": [
+                    [
+                        "66f7f2bf0d10160b609fd422"
+                    ],
+                    [
+                        "66f80512cd11a2ef232d1670"
+                    ],
+                    [
+                        "66f8058b09a827d667ebe4d5"
+                    ]
+                ],
+                "createdAt": "2024-09-28T12:12:08.591Z",
+                "updatedAt": "2024-09-28T13:32:59.164Z",
+                "__v": 3,
+                "otherUser": {
+                    "_id": "66f7f2660d10160b609fd415",
+                    "name": "Jane Doe",
+                    "avatar": "https://st2.depositphotos.com/9998432/48297/v/450/depositphotos_482974572-stock-illustration-default-avatar-photo-placeholder-grey.jpg"
+                }
+            },
+            "messages": [
+                {
+                    "_id": "66f8058b09a827d667ebe4d5",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "????",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:32:59.074Z",
+                    "createdAt": "2024-09-28T13:32:59.277Z",
+                    "updatedAt": "2024-09-28T13:32:59.277Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f80512cd11a2ef232d1670",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "ehh hi",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:30:58.814Z",
+                    "createdAt": "2024-09-28T13:30:59.084Z",
+                    "updatedAt": "2024-09-28T13:30:59.084Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f7f2bf0d10160b609fd422",
+                    "sender": "66f7f22e0d10160b609fd413",
+                    "receiver": "66f7f2660d10160b609fd415",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "hi?",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T12:12:47.640Z",
+                    "createdAt": "2024-09-28T12:12:48.005Z",
+                    "updatedAt": "2024-09-28T12:12:48.005Z",
+                    "__v": 0
+                }
+            ]
+        },{
+            "_id": "66f7f2980d10160b609fd41a",
+            "chatDetails": {
+                "_id": "66f7f2980d10160b609fd41a",
+                "user1": null,
+                "user2": null,
+                "messages": [
+                    [
+                        "66f7f2bf0d10160b609fd422"
+                    ],
+                    [
+                        "66f80512cd11a2ef232d1670"
+                    ],
+                    [
+                        "66f8058b09a827d667ebe4d5"
+                    ]
+                ],
+                "createdAt": "2024-09-28T12:12:08.591Z",
+                "updatedAt": "2024-09-28T13:32:59.164Z",
+                "__v": 3,
+                "otherUser": {
+                    "_id": "66f7f2660d10160b609fd415",
+                    "name": "Jane Doe",
+                    "avatar": "https://st2.depositphotos.com/9998432/48297/v/450/depositphotos_482974572-stock-illustration-default-avatar-photo-placeholder-grey.jpg"
+                }
+            },
+            "messages": [
+                {
+                    "_id": "66f8058b09a827d667ebe4d5",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "????",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:32:59.074Z",
+                    "createdAt": "2024-09-28T13:32:59.277Z",
+                    "updatedAt": "2024-09-28T13:32:59.277Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f80512cd11a2ef232d1670",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "ehh hi",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:30:58.814Z",
+                    "createdAt": "2024-09-28T13:30:59.084Z",
+                    "updatedAt": "2024-09-28T13:30:59.084Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f7f2bf0d10160b609fd422",
+                    "sender": "66f7f22e0d10160b609fd413",
+                    "receiver": "66f7f2660d10160b609fd415",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "hi?",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T12:12:47.640Z",
+                    "createdAt": "2024-09-28T12:12:48.005Z",
+                    "updatedAt": "2024-09-28T12:12:48.005Z",
+                    "__v": 0
+                }
+            ]
+        }
+        ,{
+            "_id": "66f7f2980d10160b609fd41a",
+            "chatDetails": {
+                "_id": "66f7f2980d10160b609fd41a",
+                "user1": null,
+                "user2": null,
+                "messages": [
+                    [
+                        "66f7f2bf0d10160b609fd422"
+                    ],
+                    [
+                        "66f80512cd11a2ef232d1670"
+                    ],
+                    [
+                        "66f8058b09a827d667ebe4d5"
+                    ]
+                ],
+                "createdAt": "2024-09-28T12:12:08.591Z",
+                "updatedAt": "2024-09-28T13:32:59.164Z",
+                "__v": 3,
+                "otherUser": {
+                    "_id": "66f7f2660d10160b609fd415",
+                    "name": "Jane Doe",
+                    "avatar": "https://st2.depositphotos.com/9998432/48297/v/450/depositphotos_482974572-stock-illustration-default-avatar-photo-placeholder-grey.jpg"
+                }
+            },
+            "messages": [
+                {
+                    "_id": "66f8058b09a827d667ebe4d5",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "????",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:32:59.074Z",
+                    "createdAt": "2024-09-28T13:32:59.277Z",
+                    "updatedAt": "2024-09-28T13:32:59.277Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f80512cd11a2ef232d1670",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "ehh hi",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:30:58.814Z",
+                    "createdAt": "2024-09-28T13:30:59.084Z",
+                    "updatedAt": "2024-09-28T13:30:59.084Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f7f2bf0d10160b609fd422",
+                    "sender": "66f7f22e0d10160b609fd413",
+                    "receiver": "66f7f2660d10160b609fd415",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "hi?",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T12:12:47.640Z",
+                    "createdAt": "2024-09-28T12:12:48.005Z",
+                    "updatedAt": "2024-09-28T12:12:48.005Z",
+                    "__v": 0
+                }
+            ]
+        }
+        ,
+        {
+            "_id": "66f7f2980d10160b609fd41a",
+            "chatDetails": {
+                "_id": "66f7f2980d10160b609fd41a",
+                "user1": null,
+                "user2": null,
+                "messages": [
+                    [
+                        "66f7f2bf0d10160b609fd422"
+                    ],
+                    [
+                        "66f80512cd11a2ef232d1670"
+                    ],
+                    [
+                        "66f8058b09a827d667ebe4d5"
+                    ]
+                ],
+                "createdAt": "2024-09-28T12:12:08.591Z",
+                "updatedAt": "2024-09-28T13:32:59.164Z",
+                "__v": 3,
+                "otherUser": {
+                    "_id": "66f7f2660d10160b609fd415",
+                    "name": "Jane Doe",
+                    "avatar": "https://st2.depositphotos.com/9998432/48297/v/450/depositphotos_482974572-stock-illustration-default-avatar-photo-placeholder-grey.jpg"
+                }
+            },
+            "messages": [
+                {
+                    "_id": "66f8058b09a827d667ebe4d5",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "????",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:32:59.074Z",
+                    "createdAt": "2024-09-28T13:32:59.277Z",
+                    "updatedAt": "2024-09-28T13:32:59.277Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f80512cd11a2ef232d1670",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "ehh hi",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:30:58.814Z",
+                    "createdAt": "2024-09-28T13:30:59.084Z",
+                    "updatedAt": "2024-09-28T13:30:59.084Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f7f2bf0d10160b609fd422",
+                    "sender": "66f7f22e0d10160b609fd413",
+                    "receiver": "66f7f2660d10160b609fd415",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "hi?",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T12:12:47.640Z",
+                    "createdAt": "2024-09-28T12:12:48.005Z",
+                    "updatedAt": "2024-09-28T12:12:48.005Z",
+                    "__v": 0
+                }
+            ]
         },
+        {
+            "_id": "66f7f2980d10160b609fd41a",
+            "chatDetails": {
+                "_id": "66f7f2980d10160b609fd41a",
+                "user1": null,
+                "user2": null,
+                "messages": [
+                    [
+                        "66f7f2bf0d10160b609fd422"
+                    ],
+                    [
+                        "66f80512cd11a2ef232d1670"
+                    ],
+                    [
+                        "66f8058b09a827d667ebe4d5"
+                    ]
+                ],
+                "createdAt": "2024-09-28T12:12:08.591Z",
+                "updatedAt": "2024-09-28T13:32:59.164Z",
+                "__v": 3,
+                "otherUser": {
+                    "_id": "66f7f2660d10160b609fd415",
+                    "name": "Jane Doe",
+                    "avatar": "https://st2.depositphotos.com/9998432/48297/v/450/depositphotos_482974572-stock-illustration-default-avatar-photo-placeholder-grey.jpg"
+                }
+            },
+            "messages": [
+                {
+                    "_id": "66f8058b09a827d667ebe4d5",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "????",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:32:59.074Z",
+                    "createdAt": "2024-09-28T13:32:59.277Z",
+                    "updatedAt": "2024-09-28T13:32:59.277Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f80512cd11a2ef232d1670",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "ehh hi",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:30:58.814Z",
+                    "createdAt": "2024-09-28T13:30:59.084Z",
+                    "updatedAt": "2024-09-28T13:30:59.084Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f7f2bf0d10160b609fd422",
+                    "sender": "66f7f22e0d10160b609fd413",
+                    "receiver": "66f7f2660d10160b609fd415",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "hi?",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T12:12:47.640Z",
+                    "createdAt": "2024-09-28T12:12:48.005Z",
+                    "updatedAt": "2024-09-28T12:12:48.005Z",
+                    "__v": 0
+                }
+            ]
+        },
+        {
+            "_id": "66f7f2980d10160b609fd41a",
+            "chatDetails": {
+                "_id": "66f7f2980d10160b609fd41a",
+                "user1": null,
+                "user2": null,
+                "messages": [
+                    [
+                        "66f7f2bf0d10160b609fd422"
+                    ],
+                    [
+                        "66f80512cd11a2ef232d1670"
+                    ],
+                    [
+                        "66f8058b09a827d667ebe4d5"
+                    ]
+                ],
+                "createdAt": "2024-09-28T12:12:08.591Z",
+                "updatedAt": "2024-09-28T13:32:59.164Z",
+                "__v": 3,
+                "otherUser": {
+                    "_id": "66f7f2660d10160b609fd415",
+                    "name": "Jane Doe",
+                    "avatar": "https://st2.depositphotos.com/9998432/48297/v/450/depositphotos_482974572-stock-illustration-default-avatar-photo-placeholder-grey.jpg"
+                }
+            },
+            "messages": [
+                {
+                    "_id": "66f8058b09a827d667ebe4d5",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "????",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:32:59.074Z",
+                    "createdAt": "2024-09-28T13:32:59.277Z",
+                    "updatedAt": "2024-09-28T13:32:59.277Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f80512cd11a2ef232d1670",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "ehh hi",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:30:58.814Z",
+                    "createdAt": "2024-09-28T13:30:59.084Z",
+                    "updatedAt": "2024-09-28T13:30:59.084Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f7f2bf0d10160b609fd422",
+                    "sender": "66f7f22e0d10160b609fd413",
+                    "receiver": "66f7f2660d10160b609fd415",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "hi?",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T12:12:47.640Z",
+                    "createdAt": "2024-09-28T12:12:48.005Z",
+                    "updatedAt": "2024-09-28T12:12:48.005Z",
+                    "__v": 0
+                }
+            ]
+        },
+        {
+            "_id": "66f7f2980d10160b609fd41a",
+            "chatDetails": {
+                "_id": "66f7f2980d10160b609fd41a",
+                "user1": null,
+                "user2": null,
+                "messages": [
+                    [
+                        "66f7f2bf0d10160b609fd422"
+                    ],
+                    [
+                        "66f80512cd11a2ef232d1670"
+                    ],
+                    [
+                        "66f8058b09a827d667ebe4d5"
+                    ]
+                ],
+                "createdAt": "2024-09-28T12:12:08.591Z",
+                "updatedAt": "2024-09-28T13:32:59.164Z",
+                "__v": 3,
+                "otherUser": {
+                    "_id": "66f7f2660d10160b609fd415",
+                    "name": "Jane Doe",
+                    "avatar": "https://st2.depositphotos.com/9998432/48297/v/450/depositphotos_482974572-stock-illustration-default-avatar-photo-placeholder-grey.jpg"
+                }
+            },
+            "messages": [
+                {
+                    "_id": "66f8058b09a827d667ebe4d5",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "????",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:32:59.074Z",
+                    "createdAt": "2024-09-28T13:32:59.277Z",
+                    "updatedAt": "2024-09-28T13:32:59.277Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f80512cd11a2ef232d1670",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "ehh hi",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:30:58.814Z",
+                    "createdAt": "2024-09-28T13:30:59.084Z",
+                    "updatedAt": "2024-09-28T13:30:59.084Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f7f2bf0d10160b609fd422",
+                    "sender": "66f7f22e0d10160b609fd413",
+                    "receiver": "66f7f2660d10160b609fd415",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "hi?",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T12:12:47.640Z",
+                    "createdAt": "2024-09-28T12:12:48.005Z",
+                    "updatedAt": "2024-09-28T12:12:48.005Z",
+                    "__v": 0
+                }
+            ]
+        },
+        {
+            "_id": "66f7f2980d10160b609fd41a",
+            "chatDetails": {
+                "_id": "66f7f2980d10160b609fd41a",
+                "user1": null,
+                "user2": null,
+                "messages": [
+                    [
+                        "66f7f2bf0d10160b609fd422"
+                    ],
+                    [
+                        "66f80512cd11a2ef232d1670"
+                    ],
+                    [
+                        "66f8058b09a827d667ebe4d5"
+                    ]
+                ],
+                "createdAt": "2024-09-28T12:12:08.591Z",
+                "updatedAt": "2024-09-28T13:32:59.164Z",
+                "__v": 3,
+                "otherUser": {
+                    "_id": "66f7f2660d10160b609fd415",
+                    "name": "Jane Doe",
+                    "avatar": "https://st2.depositphotos.com/9998432/48297/v/450/depositphotos_482974572-stock-illustration-default-avatar-photo-placeholder-grey.jpg"
+                }
+            },
+            "messages": [
+                {
+                    "_id": "66f8058b09a827d667ebe4d5",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "????",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:32:59.074Z",
+                    "createdAt": "2024-09-28T13:32:59.277Z",
+                    "updatedAt": "2024-09-28T13:32:59.277Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f80512cd11a2ef232d1670",
+                    "sender": "66f7f2660d10160b609fd415",
+                    "receiver": "66f7f22e0d10160b609fd413",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "ehh hi",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T13:30:58.814Z",
+                    "createdAt": "2024-09-28T13:30:59.084Z",
+                    "updatedAt": "2024-09-28T13:30:59.084Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "66f7f2bf0d10160b609fd422",
+                    "sender": "66f7f22e0d10160b609fd413",
+                    "receiver": "66f7f2660d10160b609fd415",
+                    "chat": "66f7f2980d10160b609fd41a",
+                    "text": "hi?",
+                    "media": [],
+                    "seen": false,
+                    "delivered": false,
+                    "time": "2024-09-28T12:12:47.640Z",
+                    "createdAt": "2024-09-28T12:12:48.005Z",
+                    "updatedAt": "2024-09-28T12:12:48.005Z",
+                    "__v": 0
+                }
+            ]
+        }
         
     ]
 }
@@ -105,12 +755,16 @@ export const firstSlice = createSlice({
             state.selectedSideButton = action.payload.index
         },
         setSelectedChat: (state, action) => {
+            console.log(action.payload)
             state.selectedChat = action.payload.chat
-        }
+        },
+        setChatList: (state, action) => {
+            state.chatList = action.payload.chatList
+        },
 
     }
 })
 
-export const { setMode, setLogin,updateUser, setLogout, setSelectedSideButton, setSelectedChat } = firstSlice.actions
+export const { setMode, setLogin,updateUser, setLogout, setSelectedSideButton, setSelectedChat, setChatList } = firstSlice.actions
 
 export default firstSlice.reducer

@@ -16,6 +16,9 @@ exports.protect=catchAsync(async(req,res,next)=>{
     }
 
     const decoded = decodeToken(token)
+    if(!decoded)
+        return next(new AppError('JWT token is not valid', 401));
+    
     const currentUser = await User.findById(decoded.id);
 
 

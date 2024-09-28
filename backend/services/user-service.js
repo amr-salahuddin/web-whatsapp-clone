@@ -9,6 +9,13 @@ exports.deleteAllUsers = async () => {
     await User.deleteMany({});
     return 1;
 }
+exports.deleteAllChats = async (user) => {
+
+    user.chats = [];
+    user.existingChats = new Map();
+    await user.save();
+    return 1;
+}
 exports.getAllUsers = async () => {
     const users = await User.find({});
     return users;

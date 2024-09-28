@@ -4,14 +4,20 @@ import Content from "../components/Content";
 import { AttachEmail } from "@mui/icons-material";
 import Options from "../components/Options";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { setSelectedChat } from "../state/first";
+import { useDispatch, useSelector } from "react-redux";
+import { setChatList, setSelectedChat } from "../state/first";
+import { getAllChatsAPI } from "../utils/apiRequests";
+import ChatList from "../components/ContentOptions/ChatsOption/ChatContactList";
 
 
 function Home() {
 
+
     //on click esc set selectedChat to null
     const dispatch = useDispatch();
+    const token = useSelector((state) => state.token)
+    const selectedChat = useSelector((state) => state.selectedChat)
+    const chatList = useSelector((state) => state.chatList)
     useEffect(() => {
 
 
@@ -26,6 +32,30 @@ function Home() {
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         }
+    },[])
+
+
+
+    async function getAllChats(token) {
+            const response = await getAllChatsAPI(token);
+            const newChats = response.data.chats
+            dispatch(setChatList({ chatList: newChats }));
+        const newSelectedChat = newChats.find((chat) => chat._id === selectedChat._id)
+        if(selectedChat){
+            //set selectedChat of that of id of chatlist
+            dispatch(setSelectedChat({
+                chat: newSelectedChat                
+            }))
+        }
+
+
+    }
+    useEffect(() => {
+        
+        getAllChats(token)
+
+
+        
     },[])
 
     return (
