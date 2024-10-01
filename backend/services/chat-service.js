@@ -3,6 +3,7 @@ const User = require('../models/user');
 const Message = require('../models/message');
 const AppError = require('../utils/appError');
 
+const SocketManager = require('../utils/SocketManager');
 
 exports.deleteAllChats = async () => {
 
@@ -82,4 +83,32 @@ exports.getChat = async (chatId) => {
 
     const chat = await Chat.findById(chatId);
     return chat
+}
+
+exports.seenChat = async (user,chatId) => {
+
+    //get All messages of chat chatId with sender user._id
+
+    const chat  = await Chat.findById(chatId);
+
+    const receiver = (chat.user1._id.equals(user._id) ? chat.user2 : chat.user1);
+
+    //update messages status to 3
+    const messages = await Message.updateMany(
+        { chat: chatId, receiver: user._id },
+        { $set: { status: 3 } }
+    )
+
+    console.log('wtf')
+    const receiverSocketId = SocketManager.getUserSocket(receiver);
+    let io = SocketManager.getIo();
+
+    console.log('receiverSocketId',receiverSocketId)
+    if(receiverSocketId){
+        console.log('hiiiiiiiiiiiiiiiiiiiiiii')
+        io.to(receiverSocketId).emit('seenChat', chatId);
+    }
+
+    return true
+
 }

@@ -5,17 +5,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { setSelectedChat } from "../../../state/first";
 import { WArchive } from "../../../svgs/WhatsAppIcons";
 import { useState } from "react";
+import { seeChatAPI } from "../../../utils/apiRequests";
 
 function ChatList() {
 
     const dispatch = useDispatch();
 
     const chatList = useSelector((state) => state.chatList)
-    console.log(chatList)
+    const token = useSelector((state) => state.token)
     const selectedChat = useSelector((state) => state.selectedChat);
-    function handleChatClick(chat) {
-        console.log(chat);
+    async function handleChatClick(chat) {
         dispatch(setSelectedChat({ chat }));
+        
+        seeChatAPI({chatId:chat._id},token)
+
     }
     const theme = useTheme();
 
@@ -70,7 +73,7 @@ function ChatList() {
 
                         {chatList.map((chat,index) => (
                             <Box key={index} sx={{ bgcolor: `${selectedChat?._id === chat?._id ? 'rgba(0,0,0,0.1)' : ''}` }} onClick={() => handleChatClick(chat)} width='100%'>
-                                <ChatContact chatDetails={chat.chatDetails} time={chat.chatDetails.createdAt} lastMessage={chat.messages[0]} />
+                                <ChatContact chatDetails={chat.chatDetails} time={chat.chatDetails.createdAt} lastMessage={chat.messages? chat.messages[0]:null} />
                             </Box>
                         ))}
                     </Box>

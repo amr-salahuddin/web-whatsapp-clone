@@ -39,6 +39,14 @@ exports.getChat = catchAsync(async (req, res, next) => {
     })
 })
 
+exports.seenChat = catchAsync(async (req, res, next) => {
+    const user = req.user;
+    const chat = await chatService.seenChat(user, req.params.id);
+    res.status(200).json({
+        status: 'success',
+       
+    })
+})
 
 
 

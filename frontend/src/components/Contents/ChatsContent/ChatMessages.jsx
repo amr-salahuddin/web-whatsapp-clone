@@ -32,15 +32,17 @@ function ChatMessages({messages}) {
 
 
     return (
-        <Box sx={{'overflowY':'auto'}}  height='100%' py={3} px={8}  display='flex' flexDirection='column'   >
+        <Box sx={{'overflowY':'auto'}}  height='100%' py={3} px={8}  gap={2} display='flex' flexDirection='column'   >
             
 
            {
-            messages.slice().reverse().map((message, index) => (
-                <Box  key={index} sx={{...messageBoxStyle, ...(message.sender === user._id ? myMessageStyle : theirMessageStyle)}}  >
-                <ChatMessage message={message} />
+            messages.slice().reverse().map((message) => {
+                const isMe = message.sender === user._id
+                return (
+                <Box  key={message._id} sx={{...messageBoxStyle, ...(isMe? myMessageStyle : theirMessageStyle)}}  >
+                <ChatMessage isMe={isMe} chatId={message.chat} messageId={message._id} />
                 </Box>
-            ))
+            )})
            }
         </Box>
     )

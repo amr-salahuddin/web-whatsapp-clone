@@ -10,6 +10,8 @@ const apiRequest = async (url, method, body,params,token) => {
 
     let data;
 
+    if(body ==null)
+        body={}
     try {
         const response = await fetch(`http://${api_url}/${url}`, {
             method,
@@ -22,9 +24,8 @@ const apiRequest = async (url, method, body,params,token) => {
         });
 
         data = await response.json();
+            console.log(data)
 
-
-        console.log(data)
         if (!response.ok) {
 
             return {
@@ -76,5 +77,11 @@ export const getAllChatsAPI = async (token) => {
 export const addMessageAPI = async (data,token) => {
     const {text,chatId} = data;
     const response = await apiRequest('chat/message', 'POST', {text,chatId},null,token);
+    return response
+}
+
+export const seeChatAPI = async (data,token) => {
+    const {chatId} = data;
+    const response = await apiRequest(`chat/see/${chatId}`, 'PATCH', {},null,token);
     return response
 }

@@ -3,7 +3,10 @@ const Message = require('../models/message');
 const Chat = require('../models/chat');
 const User = require('../models/user');
 const AppError = require('../utils/appError');
+const SocketManager = require('../utils/SocketManager');
 
+
+let io;
 
 exports.deleteAllMessages = async () => {
     await Message.deleteMany();
@@ -28,7 +31,7 @@ exports.addMessage = async (messageContent, sender, chat) => {
 
         sender,
         receiver,
-        chat
+        chat, status: 1
     })
 
     const receiverUser = await User.findById(receiver);
@@ -47,7 +50,19 @@ exports.addMessage = async (messageContent, sender, chat) => {
     await chatDetails.save();
 
 
-    const savedMessage = await message.save();
+
+
+    const receiverSocketId = SocketManager.getUserSocket(receiver);
+    console.log(receiverSocketId)
+
+    io = SocketManager.getIo();
+
+    let savedMessage = await message.save()
+    if (receiverSocketId) {
+        message.status = 2
+        savedMessage = await message.save()
+        io.to(receiverSocketId).emit('message', savedMessage);
+    }
 
     return savedMessage
 
